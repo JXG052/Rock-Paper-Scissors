@@ -1,0 +1,24 @@
+Pseudocode for Rock Paper Scissors
+
+Prompt Player 1 for R P or S
+Prompt Player 2 for R P or 
+    let winner = 
+    if p1 is r and p2 is S
+        then player 1 wins
+    else if p1 is P and P2 is S
+        then player 2 wins
+    else if p1 is s and p2 is S
+        draw
+    else if p1 is s and p2 is R
+        p2 wins
+    else if p1 is s and p2 is P
+        p1 wins
+    else if p1 is r and p2 is R
+        draw
+    else if p1 is r and p2 is P
+        p2 wins
+    else if p1 is p and p2 is p
+        draw
+    else if p1 is p and p2 is R
+        p1 wins
+return winner
