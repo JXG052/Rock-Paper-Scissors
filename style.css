@@ -1,3 +1,19 @@
 .container {
     border: 1pt solid black;
+    background-color: beige;
+}
+
+
+#who-wins-section {
+    visibility: hidden; /* Changes after each game */
+}
+/* keeps images a certain size */
+.card-img-top {
+    max-height: 200px;
+    max-width: 200px;
+    border: 1pt solid orange;
+}
+
+.choice {
+    font-size: 20px;
 }
