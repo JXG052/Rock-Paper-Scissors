@@ -1,3 +1,8 @@
 .container {
     border: 1pt solid black;
 }
+
+
+#who-wins-section {
+    visibility: hidden; /* Changes after each game */
+}
