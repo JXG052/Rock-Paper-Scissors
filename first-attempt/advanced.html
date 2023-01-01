@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class="row justify-content-center">
+            <h3 class="col-9 text-center" id="comp-heading">Computer:</h3>
+        </div>
+
+        <!-- Box Displaying what the computer chose -->
+        <div class="row justify-content-center"> 
+            <div class="card col-8 text-center" id="comp-choice-card" style="width: 18rem;">
+                <!--<img src="/assets/scissors-min.jpg" class="card-img-top mx-auto rounded" alt="..." id="comp-choice-img"> -->
+                <div class="card-body">
+                  <p class="card-text choice" id="comp-choice-p"></p>
+                </div>
+              </div>
+        </div>
+        <!-- End of Comp section -->
+
+        <!-- WHO WINS SECTION -->
+        <div class="row justify-content-center" id="who-wins-section">
+            <div class="card text-center">
+                <div class="card-header">
+                And the winner is...
+                </div>
+                <div class="card-body">
+                <h5 class="card-title" id="who-won-output">USER!</h5>
+                <p class="card-text" id="response-output">Congrats!</p>
+                <p class="card-text">Click below to play again</p>
+                <a href="#" id="play-again-btn" class="btn btn-primary">Play again</a>
+                </div>
+                <div class="card-footer text-muted">
+                Exit
+                </div>
+            </div>
+        </div>
+        <!--User Section -->
+        <div class="row justify-content-center">
+            <h3 class="col-9 text-center">You:</h3>
+        </div>
+        <!-- Drop down for user choice -->
+        <div class="row justify-content-center">
+            <div class="input-group col-6 text-center">
+                <select class="custom-select" id="inputGroupSelect04" aria-label="Rock Paper Scissors select with confirm addon">
+                <option selected>Choose...</option>
+                <option value="1">Rock</option>
+                <option value="2">Paper</option>
+                <option value="3">Scissors</option>
+                </select>
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="confirm-btn" onclick="runGame()" type="button">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card displaying what the user chose -->
+        <div class="row justify-content-center"> 
+            <div class="card col-8 text-center" id="user-choice-card" style="width: 18rem;">
+                <!-- <img src="assets/rock-min.jpg" class="card-img-top mx-auto" id="user-choice-img" alt="..."> -->
+                <div class="card-body">
+                  <p class="card-text choice" id="user-choice-p">Rock</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- <script src="/scripts/jquery.js"></script> -->
+    <script src="script.js"> </script>
+</body>
+
+</html>
