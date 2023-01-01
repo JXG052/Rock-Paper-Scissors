@@ -37,27 +37,27 @@ function whoWins(player1, player2) {
     switch (true){
         case player1 == "ROCK" && player2 == "SCISSORS":
             userCount ++;
-            message = "You win!";
+            message = "Congratulations! You win!";
             break
         case player1 == "ROCK" && player2 == "PAPER":
             compCount ++;
-            message = "You Lose";
+            message = "Unlucky! You Lose";
             break
         case player1 == "SCISSORS" && player2 == "ROCK":
             compCount ++;
-            message = "You Lose";
+            message = "Unlucky! You Lose";
             break
         case player1 == "SCISSORS" && player2 == "PAPER":
             userCount ++;
-            message = "You win!";
+            message = "Congratulations! You win!";
             break
         case player1 == "PAPER" && player2 == "SCISSORS":
             compCount ++;
-            message = "You Lose";
+            message = "Unlucky! You Lose";
             break
         case player1 == "PAPER" && player2 == "ROCK":
             userCount ++;
-            message =  "You win!";
+            message =  "Congratulations! You win!";
             break;
         default:
             message = "Draw";

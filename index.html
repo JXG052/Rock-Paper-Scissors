@@ -5,23 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Rock, Paper Scissors</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Rock Paper Scissors</h1>
-        <p>You Chose... <span id="playerChoice" class="textOutputs"></span></p>
-        <p>Computer Chose... <span id="compChoice" class="textOutputs"></span></p>
-        <p id="winnerIs" class="textOutputs"></p>
-        <button class="choice" id="ROCK">ROCK</button>
-        <button class="choice" id="PAPER">PAPER</button>
-        <button class="choice" id="SCISSORS">SCISSORS</button>
+        <div class="row justify-content-center">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <!-- Box Displaying what the computer chose -->
+        <div class="row justify-content-center"> 
+            <!-- comp card -->
+            <div class="card col-6 text-center" id="comp-choice-card" style="width: 18rem;">
+               
+                <img src="/assets/comp.jpg" class="card-img-top mx-auto rounded" alt="..." id="comp-img">
+                <div class="card-body">
+                    <p>The computer chose: <span id="compChoice" class="textOutputs"></span></p>
+                </div>
+            </div>
+            <!-- user card -->
+            <div class="card col-6 text-center" id="user-choice-card" style="width: 18rem;">
+               
+                <img src="/assets/man.svg" class="card-img-top mx-auto rounded" alt="..." id="user-img">
+                <div class="card-body">
+                    <p>You Chose... <span id="playerChoice" class="textOutputs"></span></p>
+                    <button type="button" class="btn btn-primary choice" id="ROCK">ROCK</button>
+                    <button type="button" class="btn btn-primary choice" id="PAPER">PAPER</button>
+                    <button type="button" class="btn btn-primary choice" id="SCISSORS">SCISSORS</button>
+                </div>
+            </div>
+        </div>
+       <!-- End of Row -->
+       <div class="row justify-content-center">
+            <div class="card col-8 text-center" style="width: 18rem;">
+                    <h5 class="card-title textOutputs" id="winnerIs"></h5>
+                </div>
+            </div>
+        </div>
+        <!-- end of row -->
+        <div class="row justify-content-center">
+            <div class="card col-6 text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <p class="count" id="userCount"></p> 
+                </div>
+            </div>
+            <div class="card col-6 text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <p class="count" id="compCount"></p> 
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <p class="count" id="userCount"></p>   
-        <p class="count" id="compCount"></p>
-    </div>
-    <!-- <button onclick="newCard()">NEW CARD</button> -->
-    <!-- 1. Create a paragraph with an id of "player-el" -->
+
     <script src="index.js"></script>
 </body>
 </html>
