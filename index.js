@@ -2,16 +2,26 @@ const playerChoice = document.getElementById("playerChoice");
 const compChoice = document.getElementById("compChoice");
 const winnerIs = document.getElementById("winnerIs");
 const choiceBtns = document.querySelectorAll(".choice");
+const userCountEl = document.getElementById("userCount");
+const compCountEl = document.getElementById("compCount");
 let player;
 let comp;
 let winner;
+let userCount = 0;
+let compCount = 0;
 
 choiceBtns.forEach(button => button.addEventListener("click", () => {
     player = button.textContent;
-    computerTurn()
+    comp = getRandom();
+    playerChoice.textContent = player;
+    compChoice.textContent = comp;
+    winnerIs.textContent = `${whoWins(player,comp)}`;
+    userCountEl.textContent = `You have won ${userCount} games`;
+    compCountEl.textContent = `Comp has won ${compCount} games`;
+
 }))
 
-function function getRandom(){
+function getRandom(){
     let result = Math.floor(Math.random()* 3)
     switch (result) {
         case 0:
@@ -21,4 +31,37 @@ function function getRandom(){
         case 2:
             return "SCISSORS";
     }   
+}
+function whoWins(player1, player2) {
+    let message = "";
+    switch (true){
+        case player1 == "ROCK" && player2 == "SCISSORS":
+            userCount ++;
+            message = "You win!";
+            break
+        case player1 == "ROCK" && player2 == "PAPER":
+            compCount ++;
+            message = "You Lose";
+            break
+        case player1 == "SCISSORS" && player2 == "ROCK":
+            compCount ++;
+            message = "You Lose";
+            break
+        case player1 == "SCISSORS" && player2 == "PAPER":
+            userCount ++;
+            message = "You win!";
+            break
+        case player1 == "PAPER" && player2 == "SCISSORS":
+            compCount ++;
+            message = "You Lose";
+            break
+        case player1 == "PAPER" && player2 == "ROCK":
+            userCount ++;
+            message =  "You win!";
+            break;
+        default:
+            message = "Draw";
+            break;  
+    }
+    return message;
 }
