@@ -4,9 +4,9 @@
 }
 
 
-#who-wins-section {
-    visibility: hidden; /* Changes after each game */
-}
+/* #who-wins-section {
+    visibility: hidden; 
+} */
 /* keeps images a certain size */
 .card-img-top {
     max-height: 200px;
