@@ -21,6 +21,9 @@ choiceBtns.forEach(button => button.addEventListener("click", () => {
 
 }))
 
+// create a function that takes an input of rock paper or scissors
+// and returns an image representing that 
+
 function getRandom(){
     let result = Math.floor(Math.random()* 3)
     switch (result) {
@@ -38,29 +41,36 @@ function whoWins(player1, player2) {
         case player1 == "ROCK" && player2 == "SCISSORS":
             userCount ++;
             message = "Congratulations! You win!";
+            winnerIs.style.color = "green";
             break
         case player1 == "ROCK" && player2 == "PAPER":
             compCount ++;
             message = "Unlucky! You Lose";
+            winnerIs.style.color = "red";
             break
         case player1 == "SCISSORS" && player2 == "ROCK":
             compCount ++;
             message = "Unlucky! You Lose";
+            winnerIs.style.color = "red";
             break
         case player1 == "SCISSORS" && player2 == "PAPER":
             userCount ++;
             message = "Congratulations! You win!";
+            winnerIs.style.color = "green";
             break
         case player1 == "PAPER" && player2 == "SCISSORS":
             compCount ++;
             message = "Unlucky! You Lose";
+            winnerIs.style.color = "red";
             break
         case player1 == "PAPER" && player2 == "ROCK":
             userCount ++;
             message =  "Congratulations! You win!";
+            winnerIs.style.color = "green";
             break;
         default:
             message = "Draw";
+            winnerIs.style.color = "black";
             break;  
     }
     return message;
